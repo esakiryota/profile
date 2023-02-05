@@ -4,7 +4,7 @@ import './index.css';
 import ResponsiveDrawer from './navigation.js';
 import reportWebVitals from './reportWebVitals';
 import Box from '@mui/material/Box';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +18,7 @@ const theme = createTheme({
   },});
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={homeUrl}>
   <ThemeProvider theme={theme}>
     <ResponsiveDrawer />
     </ThemeProvider>
