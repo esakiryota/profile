@@ -8,6 +8,7 @@ import './main.css'
 
 
 function Main() {
+    const homeUrl = process.env.PUBLIC_URL;
     return (
         <Box>
 
@@ -19,12 +20,12 @@ function Main() {
           objectFit:"cover",
         }}
         alt="image"
-        src="/mypic.jpg"
+        src={homeUrl + "/mypic.jpg"}
       />
             <Routes>
-            <Route extract path="" element={<Profile />} />
-            <Route path="skill" element={<Skill />} />
-            <Route path="works" element={<Works />} />
+            <Route extract path={homeUrl} element={<Profile />} />
+            <Route path={homeUrl + "/skill"} element={<Skill />} />
+            <Route path={homeUrl + "/works"} element={<Works />} />
             </Routes>
             </Box>
     )

@@ -29,6 +29,9 @@ function Works() {
             "link": "link",
         },
     ]
+
+    const homeUrl = process.env.PUBLIC_URL;
+
     return (
         <Grid container spacing={3}>
              <Grid item xs={12} md={12} style={{ display:'flex', justifyContent:'center', fontWeight: "bold", fontSize: 24, margin: 5}}>
@@ -38,7 +41,7 @@ function Works() {
                 <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image="/Board-Meet.png"
+                        image={homeUrl + "/Board-Meet.png"}
                         title="green iguana"
                     />
                     <CardContent>
@@ -58,7 +61,7 @@ function Works() {
                 <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image="/slack-view.png"
+                        image={homeUrl + "/slack-view.png"}
                         title="green iguana"
                     />
                     <CardContent>
@@ -75,7 +78,7 @@ function Works() {
                 <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image="/conetto.png"
+                        image={homeUrl + "/conetto.png"}
                         title="green iguana"
                     />
                     <CardContent>
@@ -95,7 +98,7 @@ function Works() {
                 <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image="/first_retailing.png"
+                        image={homeUrl + "/first_retailing.png"}
                         title="green iguana"
                     />
                     <CardContent>

@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+const homeUrl = process.env.PUBLIC_URL;
 const theme = createTheme({
   typography: {
     fontFamily: [

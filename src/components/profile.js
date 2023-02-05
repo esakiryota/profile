@@ -17,11 +17,12 @@ function Profile() {
         "2021年 東京大学大学院 農学生命科学研究科 応用生命工学 入学",
         "2023年 東京大学大学院 農学生命科学研究科 応用生命工学 卒業予定",
     ]
+    const homeUrl = process.env.PUBLIC_URL;
     return (
         <Box>
             <Grid elevation={3} sx={{padding: 2, marginBottom: 2}} style={{ display:'flex', justifyContent:'center' }}>
                <Box>
-                <Avatar alt="Remy Sharp" src="/avatar.JPG" sx={{ display:'flex', width: 100,height: 100, marginBottom: 2}}/>
+                <Avatar alt="Remy Sharp" src={homeUrl + "/avatar.JPG"} sx={{ display:'flex', width: 100,height: 100, marginBottom: 2}}/>
                 <Box style={{ display:'flex', justifyContent:'center',fontWeight: "bold" }}>江﨑亮太</Box>
                 </Box>
                

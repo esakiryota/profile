@@ -36,14 +36,16 @@ function ResponsiveDrawer(props) {
     setSelectedIndex(index);
   };
 
+  const homeUrl = process.env.PUBLIC_URL;
+
   const drawer = (
     <div>
       <Toolbar />
       <Divider />
       <List>
-        {[['プロフィール', ''], ['スキル', 'skill'], ['作品', 'works']].map((value, index) => (
+        {[['プロフィール', ''], ['スキル', '/skill'], ['作品', '/works']].map((value, index) => (
           <ListItem key={value[0]} disablePadding  >
-            <ListItemButton href={value[1]} selected={selectedIndex === 0}
+            <ListItemButton href={homeUrl + value[1]} selected={selectedIndex === 0}
           onClick={(event) => handleListItemClick(event, 0)}>
               <ListItemIcon>
                 {value[0] === 'プロフィール' && <PersonIcon />}
