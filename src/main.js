@@ -9,6 +9,7 @@ import './main.css'
 
 function Main() {
     const homeUrl = process.env.PUBLIC_URL;
+    console.log(homeUrl + "/skill")
     return (
         <Box>
 
