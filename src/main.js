@@ -22,9 +22,9 @@ function Main() {
         src="/mypic.jpg"
       />
             <Routes>
-            <Route extract path="/" element={<Profile />} />
-            <Route path="/skill" element={<Skill />} />
-            <Route path="/works" element={<Works />} />
+            <Route extract path="" element={<Profile />} />
+            <Route path="skill" element={<Skill />} />
+            <Route path="works" element={<Works />} />
             </Routes>
             </Box>
     )
