@@ -24,8 +24,8 @@ function Main() {
       />
             <Routes>
             <Route extract path={homeUrl} element={<Profile />} />
-            <Route path={homeUrl+"/skill/"} element={<Skill />} />
-            <Route path={homeUrl+"/works/"} element={<Works />} />
+            <Route path={homeUrl + "/skill"} element={<Skill />} />
+            <Route path={homeUrl + "/works"} element={<Works />} />
             </Routes>
             </Box>
     )
