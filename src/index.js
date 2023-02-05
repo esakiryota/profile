@@ -1,14 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import ResponsiveDrawer from './navigation.js';
 import reportWebVitals from './reportWebVitals';
+import Box from '@mui/material/Box';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Zen Kurenaido',
+      'cursive',
+    ].join(','),
+  },});
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+  <ThemeProvider theme={theme}>
+    <ResponsiveDrawer />
+    </ThemeProvider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
