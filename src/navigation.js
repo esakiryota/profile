@@ -18,7 +18,7 @@ import Main from './main'
 import PersonIcon from '@mui/icons-material/Person';
 import HandymanIcon from '@mui/icons-material/Handyman';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility';
 
 const drawerWidth = 240;
@@ -27,7 +27,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -44,17 +44,21 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
         {[['プロフィール', ''], ['スキル', "/skill"], ['作品', "/works"]].map((value, index) => (
-          <ListItem key={value[0]} disablePadding  >
-            <ListItemButton href={homeUrl + value[1]} selected={selectedIndex === 0}
-          onClick={(event) => handleListItemClick(event, 0)}>
+          <NavLink to={value[1]} style={{textDecoration: 'none', color: "black"}}>
+          <ListItem key={value[0]} disablePadding>
+            
+            <ListItemButton selected={selectedIndex === index}
+          onClick={(event) => handleListItemClick(event, index)}>
               <ListItemIcon>
-                {value[0] === 'プロフィール' && <PersonIcon />}
+                {value[0] === 'プロフィール' && <PersonIcon/>}
                 {value[0] === 'スキル' && <HandymanIcon />}
                 {value[0] === '作品' && <AutoAwesomeMotionIcon />}
               </ListItemIcon>
               <ListItemText primary={value[0]} />
+
             </ListItemButton>
           </ListItem>
+          </NavLink>
         ))}
       </List>
     </div>
